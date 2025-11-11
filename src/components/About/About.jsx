@@ -1,5 +1,6 @@
 import './About.css';
 import AboutImage from '../../assets/aout-image.webp';
+import { HashLink } from 'react-router-hash-link';
 const About = () => {
     return (
         <section id='about' className='about container'>
@@ -20,7 +21,9 @@ const About = () => {
                         <p className='about-text'>
                             With a focus on user-centric design and robust functionality, our solutions empower businesses to achieve their goals faster and more effectively. Join us on a journey to transform your enterprise processes with intelligent technology tailored to your unique needs.
                         </p>
-                        <button className='about-button'>How can we help you?</button>
+                        <HashLink
+                            smooth
+                            to="/#contact"><button className='about-button'>How can we help you?</button></HashLink>
                     </div>
                 </div>
             </div>

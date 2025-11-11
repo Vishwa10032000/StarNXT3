@@ -1,6 +1,7 @@
 import './Services.css'
 import { useState, useEffect, useMemo } from 'react';
 import { FaIndustry, FaNetworkWired, FaCloud, FaServer, FaCode, FaMobileAlt } from "react-icons/fa";
+import { HashLink } from 'react-router-hash-link';
 
 const Services = () => {
     const serviceData = [
@@ -98,9 +99,12 @@ const Services = () => {
                         >
                             <h3 className='service-card-title'>{activeService.title}</h3>
                             <p className='service-card-text'>{activeService.description}</p>
-                            <button className='service-card-button'>
-                                {activeService.button}
-                            </button>
+                            <HashLink
+                                smooth
+                                to="/#contact"><button className='service-card-button'>
+                                    {activeService.button}
+                                </button>
+                            </HashLink>
                         </div>
                     </div>
                 </div>
