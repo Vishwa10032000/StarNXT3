@@ -1,0 +1,41 @@
+.about{
+    margin: 40px 20px;
+}
+
+.about-image-container{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.about-image{
+    object-fit: cover;
+}
+
+.about-title{
+    font-size: 28px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.about-text{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-button{
+    padding: 10px 20px;
+    background: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: box-shadow 0.3s ease;
+}

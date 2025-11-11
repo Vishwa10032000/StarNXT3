@@ -1,0 +1,195 @@
+.services {
+    margin: 80px 20px;
+}
+
+.services-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.services-highlight {
+    background-image: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.service-list-item {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    max-width: 210px;
+
+    &:hover {
+        background: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(255, 105, 135, 0.2);
+    }
+
+    &.active {
+        background: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+        color: #ffffff;
+    }
+}
+
+.service-card {
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.service-card-title {
+    font-size: 42px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.service-card-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 10px;
+    margin: 0;
+}
+
+.service-card-button {
+    font-size: 18px;
+    color: #fe1676;
+    border: none;
+    line-height: 1.6;
+    background: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* ✨ Fade + slide in effect */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-slide-in {
+    animation: fadeSlideIn 0.5s ease-in-out;
+}
+
+.services-marquee-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    padding: 10px;
+}
+
+/* 🔽 Top & bottom fading mask for vertical scrolls */
+.services-marquee-container::before,
+.services-marquee-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 60px;
+    /* fade thickness */
+    pointer-events: none;
+    z-index: 2;
+}
+
+.services-marquee-container::before {
+    top: 0;
+    background: linear-gradient(to bottom, #fff, transparent);
+}
+
+.services-marquee-container::after {
+    bottom: 0;
+    background: linear-gradient(to top, #fff, transparent);
+}
+
+
+.marquee-column {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.marquee-track {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 10s linear infinite;
+}
+
+.marquee-column.reverse .marquee-track {
+    animation: scrollDown 10s linear infinite;
+}
+
+/* Upward scroll */
+@keyframes scrollUp {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Downward scroll */
+@keyframes scrollDown {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.marquee-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.marquee-item {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    height: 120px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.marquee-item .marquee-icon {
+    color: #fe1676;
+    font-size: 28px;
+}
+
+/* 🛑 Pause the animation when hovering anywhere inside the container */
+.services-marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* ✨ Highlight the hovered card */
+.marquee-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.marquee-item:hover {
+    transform: scale(1.02);
+    border: 1px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+        linear-gradient(135deg, #fe1676, #f8952d) border-box;
+    box-shadow: 0 8px 16px rgba(254, 22, 118, 0.2);
+}
