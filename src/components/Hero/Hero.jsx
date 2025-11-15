@@ -6,7 +6,7 @@ import ProductImage from "../../assets/documnet360-product.png";
 const Hero = () => {
     const intervalRef = useRef(null);
 
-    const words = ["Solutions", "Automation", "Workflows", "Intelligence", "Innovation"];
+    const words = ["Solutions", "Automation", "Workflows", "Intelligence"];
 
     const productData = [
         { name: "BizTalk360", description: "Comprehensive BizTalk Server management and monitoring solution.", color: "#FF7A00", icon: <GrDocumentCloud size={100} color="#FF7A00" />, image: ProductImage },

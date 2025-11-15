@@ -3,6 +3,7 @@ import Logo from '../../../assets/starnxt-logo-v3.png'
 import { HashLink } from 'react-router-hash-link'
 import { RiCloseLargeFill, RiMenu3Line } from 'react-icons/ri'
 import { useState, useEffect } from 'react'
+import PrimaryButton from '../../ui/PrimaryButton/PrimaryButton'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -63,6 +64,14 @@ const Header = () => {
           >
             Services
           </HashLink>
+          <HashLink
+            smooth
+            to="/#blogs"
+            className="header-link"
+            onClick={handleNavClick}
+          >
+            Insights
+          </HashLink>
         </nav>
 
         <HashLink
@@ -70,7 +79,7 @@ const Header = () => {
           to="/#contact"
           onClick={handleNavClick}
         >
-          <button className="contact-btn">Contact Us</button>
+          <PrimaryButton>Contact Us</PrimaryButton>
         </HashLink>
       </div>
     </div>

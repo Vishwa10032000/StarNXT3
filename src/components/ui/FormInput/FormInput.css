@@ -1,0 +1,31 @@
+.form-input {
+    padding: 10px 14px;
+    border-radius: 12px;
+      border: 1px solid var(--light-color);
+    color: var(--dark-color);
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-input::placeholder {
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .form-input {
+        font-size: 14px;
+    }
+
+    .form-input {
+        padding: 8px 10px;
+    }
+
+}

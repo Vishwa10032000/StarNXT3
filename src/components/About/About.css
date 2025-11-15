@@ -1,5 +1,5 @@
 .about{
-    margin: 40px 20px;
+   padding: 80px 20px;
 }
 
 .about-image-container{
@@ -31,7 +31,7 @@
 
 .about-button{
     padding: 10px 20px;
-    background: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+    background: var(--gradient-color);
     color: #fff;
     border: none;
     border-radius: 30px;

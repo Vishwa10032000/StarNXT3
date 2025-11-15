@@ -1,5 +1,8 @@
 import './Contact.css'
 import contactImage from '../../assets/contactImage.png'
+import PrimaryButton from '../ui/PrimaryButton/PrimaryButton';
+import FormInput from '../ui/FormInput/FormInput';
+import FormTextarea from '../ui/FormTextarea/FormTextarea';
 
 const Contact = () => {
   return (
@@ -43,12 +46,12 @@ const Contact = () => {
                   { type: 'email', placeholder: 'Email', col: 'col-md-6' },
                 ].map((field, i) => (
                   <div className={`${field.col} mb-3`} key={i}>
-                    <input type={field.type} placeholder={field.placeholder} className="contact-input" />
+                    <FormInput type={field.type} placeholder={field.placeholder} />
                   </div>
                 ))}
 
                 <div className="col-md-12 mb-3">
-                  <textarea placeholder="How can we help you?" className="contact-input" />
+                  <FormTextarea placeholder="How can we help you?" />
                 </div>
 
                 <div className="col-md-12 mb-3">
@@ -60,11 +63,14 @@ const Contact = () => {
 
                 <div className="col-md-12 mb-3">
                   <div className="d-flex align-items-center justify-content-center">
-                    <button
-                      className="contact-btn"
+                    <PrimaryButton
+                    onClick={(e) => {
+                      e.preventDefault();
+                      alert("Form submitted!");
+                    }}
                     >
                       Submit
-                    </button>
+                    </PrimaryButton>
                   </div>
                 </div>
               </div>

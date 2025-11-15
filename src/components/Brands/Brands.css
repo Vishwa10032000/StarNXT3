@@ -95,3 +95,13 @@
     right: 0;
     background: linear-gradient(to left, #fff, transparent);
 }
+
+@media (max-width: 768px) {
+    .brand-logo {
+        margin-left: 40px;
+    }
+
+    .brand-img {
+        height: 60px;
+    }
+}

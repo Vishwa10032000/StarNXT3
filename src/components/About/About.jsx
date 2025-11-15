@@ -1,6 +1,7 @@
 import './About.css';
 import AboutImage from '../../assets/aout-image.webp';
 import { HashLink } from 'react-router-hash-link';
+import PrimaryButton from '../ui/PrimaryButton/PrimaryButton';
 const About = () => {
     return (
         <section id='about' className='about container'>
@@ -23,7 +24,7 @@ const About = () => {
                         </p>
                         <HashLink
                             smooth
-                            to="/#contact"><button className='about-button'>How can we help you?</button></HashLink>
+                            to="/#contact"><PrimaryButton>How can we help you?</PrimaryButton></HashLink>
                     </div>
                 </div>
             </div>

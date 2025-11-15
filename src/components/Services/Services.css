@@ -1,5 +1,5 @@
 .services {
-    margin: 80px 20px;
+    padding: 80px 20px;
 }
 
 .services-title {
@@ -10,7 +10,7 @@
 }
 
 .services-highlight {
-    background-image: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+    background-image: var(--gradient-color);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -22,13 +22,13 @@
     max-width: 210px;
 
     &:hover {
-        background: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+        background: var(--gradient-color);
         color: #ffffff;
         box-shadow: 0 4px 15px rgba(255, 105, 135, 0.2);
     }
 
     &.active {
-        background: linear-gradient(to right, #fe1676 0%, #f8952d 100%);
+        background: var(--gradient-color);
         color: #ffffff;
     }
 }
@@ -55,7 +55,7 @@
 
 .service-card-button {
     font-size: 18px;
-    color: #fe1676;
+    color:  var(--primary-color);
     border: none;
     line-height: 1.6;
     background: transparent;
@@ -167,12 +167,12 @@
     align-items: center;
     gap: 10px;
     height: 120px;
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 }
 
 .marquee-item .marquee-icon {
-    color: #fe1676;
+    color:  var(--primary-color);
     font-size: 28px;
 }
 
@@ -192,4 +192,22 @@
     background: linear-gradient(#fff, #fff) padding-box,
         linear-gradient(135deg, #fe1676, #f8952d) border-box;
     box-shadow: 0 8px 16px rgba(254, 22, 118, 0.2);
+}
+
+@media screen and (max-width: 991px) {
+    .services-title{
+        font-size: 42px;
+    }
+
+    .services-marquee-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-card-title {
+        font-size: 32px;
+    }
+
+    .marquee-item  {
+        font-size: 12px;
+    }
 }

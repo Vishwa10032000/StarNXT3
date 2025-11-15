@@ -1,20 +1,20 @@
 
 import './App.css'
-import { HashRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/Home'
+import { Outlet } from 'react-router-dom'
 import Header from './components/layouts/Header/Header'
 import Footer from './components/layouts/Footer/Footer'
+
 
 function App() {
 
   return (
-    <HashRouter>
-      <Header/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+    <>
+      <Header />
+      <main style={{ minHeight: '80vh' }}>
+        <Outlet /> {/* 👈 Page content loads here */}
+      </main>
       <Footer />
-   </HashRouter>
+    </>
   )
 }
 

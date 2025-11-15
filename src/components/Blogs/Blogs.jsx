@@ -1,9 +1,10 @@
-import './Testimonials.css'
+import './Blogs.css'
 import { useState, useRef, useEffect } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import TestimonialImage1 from '../../assets/aout-image.webp'
+import InfoCard from '../ui/InfoCard/InfoCard'
 
-const Testimonials = () => {
+const Blogs = () => {
   const testimonialData = [
     {
       title: 'Best Innovation in Enterprise Software 2023',
@@ -88,7 +89,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="testimonials">
+    <section id="blogs" className="blogs">
       <div className="row">
         <div className="col-md-4">
           <h3 className="testimonials-title">
@@ -111,19 +112,14 @@ const Testimonials = () => {
               onTransitionEnd={handleTransitionEnd}
             >
               {extendedData.map((item, index) => (
-                <div
+                <InfoCard
                   key={index}
-                  className="testimonial-card"
-                  ref={index === 1 ? cardRef : null} // measure the first real card
-                >
-                  <img
-                    src={item.image}
-                    alt={`testimonial-${index}`}
-                    className="testimonial-image"
-                  />
-                  <h4 className="testimonial-subtitle">{item.title}</h4>
-                  <p className="testimonial-subtext">{item.text}</p>
-                </div>
+                  ref={index === 1 ? cardRef : null}
+                  image={item.image}
+                  title={item.title}
+                  text={item.text}
+                />
+
               ))}
             </div>
 
@@ -148,8 +144,8 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default Testimonials
+export default Blogs;
