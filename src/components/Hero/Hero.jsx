@@ -52,7 +52,7 @@ const Hero = () => {
             // product tab change
             setActiveButtonIndex(prev => (prev + 1) % productData.length);
         }, 5000);
-    }, [productData.length]);
+    }, [productData.length, words.length]);
 
     // mount/unmount
     useEffect(() => {

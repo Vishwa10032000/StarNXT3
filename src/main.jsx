@@ -7,6 +7,7 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Home from './pages/Home/Home.jsx';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
+import BlogDetails from './pages/Blogs/BlogDetails/BlogDetails.jsx';
 
 const router = createHashRouter([
   {
@@ -14,6 +15,8 @@ const router = createHashRouter([
     element: <App />,             // 🧱 Common layout (Header + Footer)
     children: [
       { index: true, element: <Home /> },     
+       // ⭐ Blog Page
+      { path: 'blogs/:slug', element: <BlogDetails /> },
     ],
   },
   {

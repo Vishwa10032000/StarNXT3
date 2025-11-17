@@ -99,19 +99,17 @@ const Footer = () => {
             <address className="footer-address" >
               <p>
                 <FaMapMarkerAlt className="contact-icon" />
-                Covai Tech Park, #104, 1st floor, 4th tower, 86/87 plot no,<br />
-                4th south cross street, Kovai Thiru Nagar, Nehru Nagar East<br />
-                Coimbatore, Tamil Nadu, India - 641014
+                Covai Tech Park, Nehru Nagar West, Sitra, Coimbatore - 641014.
               </p>
 
-              <p>
+              {/* <p>
                 <FaPhoneAlt className="contact-icon" />
                 <a className="footer-link" href="tel:+1234567890">+91 9626264112</a>
-              </p>
+              </p> */}
 
               <p>
                 <FaEnvelope className="contact-icon" />
-                <a className="footer-link" href="mailto:contact@t-nxt.com">contact@t-nxt.com</a>
+                <a className="footer-link" href="mailto:starnxt25@gmail.com">starnxt25@gmail.com</a>
               </p>
             </address>
 

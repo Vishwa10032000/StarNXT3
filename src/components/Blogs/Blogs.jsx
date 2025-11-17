@@ -1,43 +1,16 @@
 import './Blogs.css'
 import { useState, useRef, useEffect } from 'react'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import TestimonialImage1 from '../../assets/aout-image.webp'
 import InfoCard from '../ui/InfoCard/InfoCard'
+import { blogData } from '../../data/blogData'
 
 const Blogs = () => {
-  const testimonialData = [
-    {
-      title: 'Best Innovation in Enterprise Software 2023',
-      text: 'Recognized for delivering transformative enterprise solutions with next-gen automation and intelligence.',
-      image: TestimonialImage1,
-    },
-    {
-      title: 'Top SaaS Product Excellence 2024',
-      text: 'Awarded for outstanding SaaS platform innovation and customer impact in enterprise modernization.',
-      image: TestimonialImage1,
-    },
-    {
-      title: 'Excellence in Cloud Transformation',
-      text: 'Celebrating success in helping organizations seamlessly migrate and optimize their cloud operations.',
-      image: TestimonialImage1,
-    },
-    {
-      title: 'Best Workplace Technology Provider',
-      text: 'Honored for enhancing workplace collaboration and productivity through intelligent digital tools.',
-      image: TestimonialImage1,
-    },
-    {
-      title: 'Customer Success Award 2024',
-      text: 'Recognized for exceptional delivery and customer satisfaction across enterprise implementations.',
-      image: TestimonialImage1,
-    },
-  ]
 
   // Duplicate first and last items for seamless infinite loop
   const extendedData = [
-    testimonialData[testimonialData.length - 1],
-    ...testimonialData,
-    testimonialData[0],
+    blogData[blogData.length - 1],
+    ...blogData,
+    blogData[0],
   ]
 
   const [currentIndex, setCurrentIndex] = useState(1) // Start at index 1 (first real slide)
@@ -64,8 +37,8 @@ const Blogs = () => {
     if (currentIndex === 0) {
       // Jump to last real card without animation
       setTransitionEnabled(false)
-      setCurrentIndex(testimonialData.length)
-    } else if (currentIndex === testimonialData.length + 1) {
+      setCurrentIndex(blogData.length)
+    } else if (currentIndex === blogData.length + 1) {
       // Jump to first real card without animation
       setTransitionEnabled(false)
       setCurrentIndex(1)
@@ -118,6 +91,7 @@ const Blogs = () => {
                   image={item.image}
                   title={item.title}
                   text={item.text}
+                  slug={item.slug}
                 />
 
               ))}
@@ -133,7 +107,7 @@ const Blogs = () => {
 
             {/* Dots */}
             <div className="carousel-dots">
-              {testimonialData.map((_, i) => (
+              {blogData.map((_, i) => (
                 <span
                   key={i}
                   className={`dot ${i + 1 === currentIndex ? 'active' : ''}`}
