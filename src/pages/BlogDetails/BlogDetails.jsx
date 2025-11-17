@@ -1,6 +1,6 @@
 import './BlogDetails.css';
 import { useParams } from 'react-router-dom';
-import { blogData } from '../../../data/blogData';
+import { blogData } from '../../data/blogData';
 import { HashLink } from 'react-router-hash-link';
 import { useEffect } from 'react';
 

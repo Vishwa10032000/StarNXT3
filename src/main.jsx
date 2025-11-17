@@ -7,7 +7,7 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Home from './pages/Home/Home.jsx';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage.jsx';
-import BlogDetails from './pages/Blogs/BlogDetails/BlogDetails.jsx';
+import BlogDetails from './pages/BlogDetails/BlogDetails.jsx';
 
 const router = createHashRouter([
   {
